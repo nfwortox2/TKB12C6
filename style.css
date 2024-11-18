@@ -1,0 +1,69 @@
+html { overflow-y: scroll; overflow-x:hidden; }
+body { position: absolute; }
+body {
+    font-family: 'Lora', serif;
+    background-color: #f0f8ff;
+    text-align: center;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i.pinimg.com/736x/c2/09/9c/c2099c53c9975ec7530da1daf14f16c5.jpg');
+    background-size: cover;
+    background-position: center;
+    filter: blur(4px);
+    z-index: -1;
+    alt: "Background image of flowers";
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3em;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.gradient-text {
+    background: linear-gradient(to right, #ff0000, #ff69b4); /* Gradient from red to pink */
+    -webkit-background-clip: text;
+    color: transparent;
+}
+
+.animated-text {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 2s ease, transform 2s ease;
+    margin: 20px 0;
+    font-size: 1.5em;
+    color: #ff69b4;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.animated-text.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+    .animated-text {
+        font-size: 1.2em;
+    }
+}
