@@ -1,4 +1,10 @@
-fetch('https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.vn/tkb_2024_2025/11/tkb_2bclass_28.html')
+const startDate = new Date("2024-09-09:00:000:+7")
+const endDate = new Date()
+
+const timeDifference = Math.abs(endDate - startDate);
+const weeks = Math.ceil(timeDifference / (1000 * 60 * 60 * 24 * 7));
+console.log(weeks)
+fetch(`https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.vn/tkb_2024_2025/${weeks}/tkb_2bclass_28.html`)
   .then(response => response.text())
   .then(html => {
     const parser = new DOMParser();
@@ -20,7 +26,7 @@ fetch('https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.
 		var data_need = doc.querySelector('tbody').rows[i];
         const cells = rows[i].getElementsByTagName('td');
 		console.log("rows[i].getElementsByTagName('td');")
-		console.log(i);
+		console.log(data_need);
 		if (i==1 || i==6) {
 			for (let j = 0; j < 7; j++) {
 				cells[j].innerHTML = data_need.cells[j].textContent;
@@ -29,7 +35,7 @@ fetch('https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.
 		}
 		else {
 			for (let j = 0; j < 6; j++) {
-				cells[j+1].innerHTML = data_need.cells[j].textContent;
+				cells[j].innerHTML = data_need.cells[j].textContent;
 				console.log("scence 2");
 			}
 		}
