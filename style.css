@@ -18,7 +18,7 @@ body {
 }
 
 table {
-    width: 80%; /* Adjust this percentage as needed */
+    width: 80%; /* Assuming a maximum width of 80% of the viewport */
     border-collapse: collapse;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -26,7 +26,9 @@ table {
 
 th,
 td {
-    padding: 1em; /* Adjust the 'em' value as needed */
+	text-align: center;
+	vertical-align: middle;
+    padding: 1.5rem; /* Using rem units for relative sizing */
     background-color: rgba(255,255,255,0.2);
     color: #fff;
 }
@@ -45,10 +47,8 @@ tbody {
     tr:hover {
         background-color: rgba(255,255,255,0.3);
     }
-
     td {
         position: relative;
-
         &:hover {
             &:before {
                 content: "";
