@@ -25,8 +25,8 @@ fetch(`https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.
     for (let i = 1; i < 10; i++) {
 		var data_need = doc.querySelector('tbody').rows[i];
         const cells = rows[i].getElementsByTagName('td');
-		console.log("rows[i].getElementsByTagName('td');")
-		console.log(data_need);
+		// console.log("rows[i].getElementsByTagName('td');")
+		// console.log(data_need);
 		if (i==1 || i==6) {
 			for (let j = 0; j < 7; j++) {
 				cells[j].innerHTML = data_need.cells[j].textContent;
