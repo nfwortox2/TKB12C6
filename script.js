@@ -1,9 +1,13 @@
+Date.prototype.addDays = function(days) {
+    var date = new Date(this.valueOf());
+    date.setDate(date.getDate() + days);
+    return date;
+}
 const startDate = new Date("2024-09-09:00:000:+7")
 const endDate = new Date()
 
-const timeDifference = Math.abs(endDate - startDate);
+const timeDifference = Math.abs(endDate.addDays(1) - startDate);
 const weeks = Math.ceil(timeDifference / (1000 * 60 * 60 * 24 * 7));
-console.log(weeks)
 fetch(`https://api.codetabs.com/v1/proxy/?quest=https://thpt-tpdbp-dienbien.edu.vn/tkb_2024_2025/${weeks}/tkb_2bclass_28.html`)
   .then(response => response.text())
   .then(html => {
