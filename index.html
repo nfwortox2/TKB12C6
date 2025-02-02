@@ -99,35 +99,4 @@
 			</tfoot>
         </table>
     </div>
-	
-	<a id="downloadLink" href="#">Download Table as PNG</a>
-
-   <script>
-  const downloadLink = document.getElementById('downloadLink');
-  const table = document.getElementById('myTable');
-
-  downloadLink.addEventListener('click', function(event) {
-    event.preventDefault();
-
-    // *** KEY CHANGES START HERE ***
-    html2canvas(table, {
-      // Important for handling potentially problematic fonts
-      useCORS: true, // Try to load cross-origin images/fonts (if any)
-      allowTaint: true, // Allow tainted canvases (might help with some fonts)
-      // Add a timeout, just in case things get stuck
-      timeout: 10000 // 10 seconds timeout
-    }).then(canvas => {
-      const dataURL = canvas.toDataURL('image/png');
-      downloadLink.href = dataURL;
-      downloadLink.download = 'table.png';
-    }).catch(error => {
-      console.error("Error capturing table:", error); // Log any errors!
-      alert("An error occurred while capturing the table. Check the console for details.");
-    });
-    // *** KEY CHANGES END HERE ***
-
-  });
-</script>
-
-  
 </body>
