@@ -3,8 +3,6 @@ body {
     height: 100%;
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(45deg, #f3f3f3, #e0e0e0);
-    color: #333;
 }
 
 .container {
@@ -15,14 +13,14 @@ body {
     width: 90%;
     max-width: 1200px;
     padding: 20px;
-    background: #fff;
+    background: #070F2B;
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
     text-align: center;
-    color: #444;
+    color: #16537e;
     margin-bottom: 20px;
     font-size: 2rem;
     font-weight: 600;
@@ -32,7 +30,7 @@ table {
     width: 100%;
     border-collapse: collapse;
     margin: 0 auto;
-    background: #fff;
+    background: #000000;
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
@@ -47,30 +45,21 @@ td {
 }
 
 th {
-    background-color: #55608f;
-    color: #fff;
+    background-color: #F8F0D4;
+    color: #000000;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
 
 td {
-    background-color: #f9f9f9;
-    color: #555;
-}
-
-tr:nth-child(even) td {
-    background-color: #f1f1f1;
-}
-
-tr:hover td {
-    background-color: #e0e0e0;
-    transition: background-color 0.3s ease;
+    background-color: #535C91;
+    color: #ACA36E;
 }
 
 tfoot td {
-    background-color: #55608f;
-    color: #fff;
+    background-color: #535C91;
+    color: #ACA36E;
     font-style: italic;
     padding: 10px;
     text-align: center;
@@ -92,5 +81,5 @@ tfoot td {
 }
 
 #capture-btn:hover {
-    background-color: #0056b3; /* Màu nền khi hover */
+    background-color: #3d85c6; /* Màu nền khi hover */
 }
